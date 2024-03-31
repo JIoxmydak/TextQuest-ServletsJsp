@@ -20,14 +20,14 @@ public class QuestServlet extends HttpServlet {
             session.setAttribute("victory", false);
             session.setAttribute("defeat", false);
             session.setAttribute("stage", Stage.FIRST);
-            session.setAttribute("IPaddress", req.getRemoteAddr());
+            session.setAttribute("IP_address", req.getRemoteAddr());
         }
 
         getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         HttpSession session = req.getSession();
         String action = req.getParameter("action");
 

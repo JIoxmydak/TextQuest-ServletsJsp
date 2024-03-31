@@ -67,7 +67,10 @@
     </c:if>
 
     <c:if test="${stage == null}">
-      <input type="text" name="userName"> <button type="button" class="button" onclick="startQuest()">Представиться</button>
+      <label>
+          <input type="text" name="userName">
+      </label>
+      <button type="button" class="button" onclick="startQuest()">Представиться</button>
     </c:if>
 
     <c:if test="${stage == FIRST_STAGE}">
@@ -92,7 +95,7 @@
     <br>
     <br>
     <br>
-    <p>IP address: <%=session.getAttribute("IPaddress")%></p>
+    <p>IP address: <%=session.getAttribute("IP_address")%></p>
   </div>
 </c:if>
 
